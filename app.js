@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 //nagłówek z informacją odnośnie CORS-ów
 app.use((req, res, next) => {
     //wymieniasz domeny dopuszczone - czyli zamiast wszystkich czyli * można wymienić np. tylko nasz FE
-    res.setHeader('Access-Controll-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     //wymieniasz dozwolone metody http
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
     //wymieniasz dozwolone headersy

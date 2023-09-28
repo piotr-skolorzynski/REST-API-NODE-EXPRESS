@@ -20,8 +20,20 @@
         .catch((err) => console.log(err));
     };
 
-    const sendPost = event;
+    const sendPost = () => {
+      fetch('http://localhost:3000/feed/post', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title: 'post from FE',
+          content: 'pij mleko będziesz wielki albo ... nie',
+        }),
+      });
+    };
 
     getButton.addEventListener('click', getPosts);
+    postButton.addEventListener('click', sendPost);
   </script>
 </html>
